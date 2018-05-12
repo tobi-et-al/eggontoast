@@ -50,7 +50,7 @@
             "@php artisan package:discover"
         ],
         "post-deployment-seed-data": [
-            "php artisan migrate:fresh --seed "
+            "@php artisan migrate:fresh --seed "
         ],
         "post-deployment-server-config": [
             "vendor/bin/heroku-php-nginx -C ./nginx.conf"
