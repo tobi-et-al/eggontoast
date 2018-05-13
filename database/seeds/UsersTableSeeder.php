@@ -27,6 +27,15 @@ class UsersTableSeeder extends Seeder
             'name' => 'Administrator',
             'email' => 'admin@test.com',
             'password' => $password,
+            'api_token' => 'test'
+        ]);
+
+        User::create([
+            'name' => 'Api',
+            'email' => 'Api@test.com',
+            'password' => $password,
+            'api_token' => 'testapi'
+
         ]);
 
         // And now let's generate a few dozen users for our app:

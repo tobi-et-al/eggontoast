@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Exception;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -65,4 +66,5 @@ class Handler extends ExceptionHandler
         return response()->json(['error' => 'Unauthenticated'], 401);
 
     }
+
 }
