@@ -27,8 +27,7 @@ class JobsTableSeeder extends Seeder
             Job::create([
                 'title' => $title,
                 'category' => $categoriesList[$randomCategoryKey],
-                'description' => $title. " description",
-
+                'description' => $faker->realText(),
                 'location' => $faker->city
             ]);
         }
