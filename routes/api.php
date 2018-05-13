@@ -23,12 +23,13 @@ Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout');
 
 
+Route::get('job', 'JobController@index');
+Route::get('job/{job}', 'JobController@show');
+Route::post('job', 'JobController@store');
+Route::put('job/{job}', 'JobController@update');
+Route::delete('job/{job}', 'JobController@delete');
+
 Route::group(['middleware' => ['auth:api','cors']], function() {
 
-    Route::get('job', 'JobController@index');
-    Route::get('job/{job}', 'JobController@show');
-    Route::post('job', 'JobController@store');
-    Route::put('job/{job}', 'JobController@update');
-    Route::delete('job/{job}', 'JobController@delete');
 
 });
