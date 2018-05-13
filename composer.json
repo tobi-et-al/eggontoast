@@ -49,11 +49,11 @@
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
         ],
-        "post-deployment-seed-data": [
-            "@php artisan migrate:fresh --seed "
-        ],
         "post-deployment-server-config": [
             "vendor/bin/heroku-php-nginx -C ./nginx.conf"
+        ],
+        "post-deployment-seed-data": [
+            "@php artisan migrate:refresh --seed"
         ],
         "test" : [
             "vendor/bin/phpunit"
