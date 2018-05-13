@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
+    use Faker\Factory;
+    use Illuminate\Database\Seeder;
 use App\Model\Job;
 
 class JobsTableSeeder extends Seeder
@@ -21,7 +22,7 @@ class JobsTableSeeder extends Seeder
         for ($i = 0; $i < 10; $i++) {
             $randomCategoryKey = rand(0,count($categoriesList)-1);
 
-            $faker = \Faker\Factory::create();
+            $faker = Factory::create();
             $title = $faker->jobTitle;
             Job::create([
                 'title' => $title,
